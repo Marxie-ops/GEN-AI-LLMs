@@ -10,44 +10,45 @@ Improved Access to Information: By creating an easy-to-use search tool, users ca
 Enhanced Decision-Making for Business and Professionals: This tool allows business owners, investors, and professionals to stay up-to-date with trends, news, and analysis in the Kenyan business sector, making it easier to make informed decisions about investments, partnerships, and strategies.
 
 ## *Steps Used to Build the Tool*
-Setting Up the Environment:
+* *Setting Up the Environment:*
 
 Set up the development environment by installing necessary Python packages like streamlit, langchain, openai, faiss, and others.
 Set the OpenAI API key either directly in the code or through a .env file to authenticate API requests.
-Data Collection:
+* *Data Collection:*
 
 Loaded business-related data from Kenyan news websites using the UnstructuredURLLoader class from LangChain.
 Specified the URLs of multiple Kenyan business news sources.
-Data Processing:
+* *Data Processing:*
 
 Split the content of the documents into smaller chunks using RecursiveCharacterTextSplitter to make the information manageable and improve the efficiency of document retrieval.
 Cleaned the data by removing extra line breaks and ensuring a consistent format for each document.
-Creating Embeddings:
+* *Creating Embeddings:*
 
 Generated embeddings of the processed documents using OpenAI’s OpenAIEmbeddings. Embeddings are numerical representations of the documents that allow for semantic search.
-Building the Vector Store:
+* *Building the Vector Store:*
 
 Created a FAISS vector index using the embeddings to enable fast similarity search.
 The FAISS index is stored in a file (e.g., vector1_index.index) for efficient retrieval of relevant documents during user queries.
-Query Processing and Model Setup:
+* *Query Processing and Model Setup:*
 
 Set up a RetrievalQAWithSourcesChain from LangChain, which allows for querying the loaded documents and retrieving both answers and source references.
 Integrated OpenAI's GPT-3.5 model for generating natural language responses based on the retrieved documents.
-Streamlit User Interface:
+* *Streamlit User Interface:*
 
 Developed an interactive Streamlit UI for the app. This UI allows users to input a query and see the generated answer along with the sources used for the answer.
 The app processes the user's input, queries the document store, and displays relevant answers and sources.
-Saving and Loading the FAISS Index:
+* *Saving and Loading the FAISS Index:*
 
 The FAISS vector index is saved to disk for persistence and later use. This prevents reprocessing the documents every time the app is used.
 The index is reloaded from the file when the app is restarted, ensuring the tool is efficient and scalable.
-Deployment and Usage:
+* *Deployment and Usage:*
 
 The tool is made accessible locally via Streamlit for users to interact with the tool and retrieve business information from Kenyan business websites.
-Documentation:
+* *Documentation:*
 
 Created comprehensive documentation for the tool, outlining installation steps, usage, and troubleshooting, making it easy for others to use or contribute to the project.
-Conclusion
+* *Conclusion*
+  
 This tool effectively addresses the challenge of accessing, processing, and querying Kenyan business news in a structured and efficient way. The use of AI-powered document retrieval and natural language processing helps provide meaningful insights to users quickly. The system can be scaled or adapted to other regions or industries as needed, offering significant potential for expanding its use.
 
 
