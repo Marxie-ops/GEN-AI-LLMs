@@ -128,23 +128,24 @@ The app uses LangChain to load data from various Kenyan business websites, split
 
 ## *Example search flow:*
 
-User enters a query like: "What are the latest trends in the Kenyan real estate market?"
-The system retrieves relevant documents from the sources, performs search using embeddings, and provides the answer with references.
+* User enters a query like: "What are the latest trends in the Kenyan real estate market?"
+* The system retrieves relevant documents from the sources, performs search using embeddings, and provides the answer with references.
 Code Overview
-Business Search Tool: The main functionality of the app is implemented in the business_search_tool.py file.
+* Business Search Tool: The main functionality of the app is implemented in the business_search_tool.py file.
 
-Document Processing: The UnstructuredURLLoader is used to load data from various URLs related to Kenyan business news.
+* Document Processing: The UnstructuredURLLoader is used to load data from various URLs related to Kenyan business news.
 
-Text Splitting and Cleaning: The documents are split into chunks using RecursiveCharacterTextSplitter and cleaned for consistent formatting.
+* Text Splitting and Cleaning: The documents are split into chunks using RecursiveCharacterTextSplitter and cleaned for consistent formatting.
 
-FAISS Vector Store: The FAISS vector index is created from the processed documents and used for efficient similarity search.
+* FAISS Vector Store: The FAISS vector index is created from the processed documents and used for efficient similarity search.
 
-LangChain Retrieval Chain: The RetrievalQAWithSourcesChain is used to combine the document retrieval and response generation using the OpenAI model.
+* LangChain Retrieval Chain: The RetrievalQAWithSourcesChain is used to combine the document retrieval and response generation using the OpenAI model.
 
 Project Structure
 bash
 Copy
 Edit
+
 .
 ├── business_search_tool.py         # Main script for the Streamlit app
 
