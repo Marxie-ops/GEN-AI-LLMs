@@ -66,55 +66,62 @@ This project leverages LangChain, OpenAI, and FAISS to create a powerful search 
 To set up the project on your local machine, follow the steps below:
 
 Clone the repository:
-* bash
+* ```bash
   Copy
   Edit
   git clone <your-repository-url>
   cd <your-project-directory>
+  ```
   Install the required dependencies:
 
-* bash
+* ```bash
   Copy
   Edit
   pip install -r requirements.txt
+  ```
   Set up OpenAI API key:
 
 * Create a .env file in the project directory and add your OpenAI API key:
 
-* makefile
+* ```makefile
   Copy
   Edit
   OPENAI_API_KEY=your_api_key_here
   Or, you can set the key directly in your code:
-
+```
+```
 * python
   Copy
   Edit
   import os
   os.environ['OPENAI_API_KEY'] = 'your_api_key_here'
+  ```
 * Install FAISS:
 
 For FAISS to work, ensure that the appropriate FAISS package is installed. You can install the CPU version using:
 
-* bash
+* ```bash
   Copy
   Edit
   pip install faiss-cpu
+  ``
   Or, for GPU support, install:
 
-* bash
+* ```bash
   Copy
   Edit
   pip install faiss-gpu
+  ```
   Usage
   Running the app locally:
 
 * Once the environment is set up, you can run the app using Streamlit:
 
-* bash
+* ```bash
   Copy
   Edit
   streamlit run business_search_tool.py
+  ```
   User interface:
 
 The app will launch in your browser. You can then:
