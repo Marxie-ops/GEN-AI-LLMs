@@ -149,7 +149,7 @@ Code Overview
 * LangChain Retrieval Chain: The RetrievalQAWithSourcesChain is used to combine the document retrieval and response generation using the OpenAI model.
 
 Project Structure
-bash
+```bash
 Copy
 Edit
 
@@ -163,7 +163,7 @@ Edit
 ├── vector1_index.index             # FAISS index file for fast searching (generated during runtime)
 
 └── README.md                       # Project documentation
-
+```
 * *Troubleshooting*
 If you encounter any issues, consider the following:
 
